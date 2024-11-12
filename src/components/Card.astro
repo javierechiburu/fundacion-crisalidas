@@ -9,7 +9,7 @@ interface Props {
 const { url, title, body, className } = Astro.props;
 ---
 
-<div class={`clip-path relative ${className} `}>
+<div class={`clip-path relative ${className} max-w-64 w-full`}>
   <div class="absolute -top-1 right-1 h-28 w-28 rounded-full bg-red-300/20">
   </div>
   <div
