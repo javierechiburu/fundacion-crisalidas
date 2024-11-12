@@ -1,0 +1,81 @@
+---
+// Header.astro
+---
+
+<header class="[grid-area:header] header">
+  <img src="/mariposas.png" alt="logo crisalidas" class="logo" />
+  <nav>
+    <div class="hidden md:flex space-x-8 rounded-full">
+      <a href="/" class="text-white hover:text-gray-300 transition duration-300"
+        >Inicio</a
+      >
+      <a
+        href="#services"
+        class="text-white hover:text-gray-300 transition duration-300"
+        >Donación</a
+      >
+      <a
+        href="#about"
+        class="text-white hover:text-gray-300 transition duration-300"
+        >Nosotr@s</a
+      >
+      <a
+        href="#contact"
+        class="text-white hover:text-gray-300 transition duration-300"
+        >Contacto</a
+      >
+    </div>
+  </nav>
+</header>
+
+<style>
+  .header {
+    background: transparent;
+    padding: 1rem;
+    max-width: 72rem;
+    width: 100%;
+    position: sticky;
+    top: 0.25rem;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 50;
+    font-size: 1.1rem;
+    animation: enhance-header linear both;
+    animation-timeline: scroll(root block);
+    animation-range: 0 200px;
+  }
+
+  .logo {
+    height: 4rem;
+    width: 4rem;
+    opacity: 1;
+    visibility: visible;
+    animation: enhance-img linear both;
+    animation-timeline: scroll();
+    animation-range: 0 200px;
+  }
+
+  @keyframes enhance-header {
+    to {
+      border-radius: 4rem;
+      width: 24.6rem;
+      background: #8b5cf6;
+      justify-content: end;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+  }
+
+  @keyframes enhance-img {
+    to {
+      z-index: -1;
+      opacity: 0;
+      visibility: hidden;
+      position: absolute;
+      left: 2rem;
+    }
+  }
+</style>

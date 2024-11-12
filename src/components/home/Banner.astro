@@ -1,0 +1,51 @@
+---
+// Banner.astro
+---
+
+<section
+  class="px-4 text-white h-[calc(100vh - 70px)] flex justify-center items-center"
+>
+  <div class="max-w-6xl mx-auto flex items-center justify-between space-x-16">
+    <!-- Texto del Banner -->
+    <div
+      class="flex-1 space-y-6 p-4 rounded-xl flex flex-col justify-center items-center"
+    >
+      <div class="flex flex-col">
+        <h1
+          class="text-5xl mb-4 text-start font-bold leading-tight tracking-tight"
+        >
+          Fundación <span class="bg-clip-text text-transparent bg-purple-200"
+            >Crisálidas</span
+          >
+        </h1>
+        <p class="text-base mb-2">
+          Se inspira en una mirada tierna y profunda para crear un mundo
+          armonioso. Valoramos la naturaleza, la vida en comunidad y el
+          bienestar personal. A través de la educación, las artes, la ecología y
+          muchas otras actividades, buscamos promover hábitos saludables,
+          inclusión de todas las edades y géneros, y respeto por la diversidad.
+        </p>
+        <p class="text-base font-bold">
+          ¡Te invitamos a navegar por el mundo con nosotrxs para promover el
+          resguardo de la esencia humana y de la participación en el mundo!
+        </p>
+      </div>
+
+      <a
+        href="/donations"
+        class="inline-block mt-6 px-8 py-3 bg-yellow-400 text-black font-semibold rounded-lg hover:bg-yellow-500 transition-colors duration-300 shadow-[rgba(6,_24,_44,_0.4)_0px_0px_0px_2px,_rgba(6,_24,_44,_0.65)_0px_4px_6px_-1px,_rgba(255,_255,_255,_0.08)_0px_1px_0px_inset]"
+      >
+        Dona Ahora
+      </a>
+    </div>
+
+    <!-- Ilustración -->
+    <div class="flex-1 hidden lg:block">
+      <img
+        src="/banner.png"
+        alt="Ilustración de donación"
+        class="max-w-full h-96"
+      />
+    </div>
+  </div>
+</section>
