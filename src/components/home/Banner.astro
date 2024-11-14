@@ -41,11 +41,37 @@
 
     <!-- Ilustración -->
     <div class="flex-1 hidden lg:block">
-      <img
-        src="/banner.png"
-        alt="Ilustración de donación"
-        class="max-w-full h-96"
-      />
+      <img src="/atardecer.jpg" alt="Ilustración de donación" class="banner" />
     </div>
+    <img
+      src="/m.png"
+      alt="Ilustración de donación"
+      class="max-w-full h-36 move"
+    />
   </div>
 </section>
+
+<style>
+  .banner {
+    height: 28rem;
+    max-width: 100%;
+    object-fit: cover;
+    border-radius: 4rem 4rem 50% 50%;
+    mask-image: linear-gradient(black 80%, transparent);
+  }
+  .move {
+    position: absolute;
+    right: 20rem;
+    top: 15rem;
+    animation: fly linear both;
+    animation-timeline: scroll(root block);
+    animation-range: 50px 500px;
+  }
+
+  @keyframes fly {
+    to {
+      transform: translateX(-200%) translateY(250%);
+      opacity: 0;
+    }
+  }
+</style>
