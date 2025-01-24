@@ -1,0 +1,74 @@
+<div class="h-screen grid grid-cols-1 md:grid-cols-2 px-24">
+  <div class="flex flex-col justify-center">
+    <h2 class="text-5xl font-bold mb-6 text-center text-white">
+      Haz tu donación
+    </h2>
+    <p class="text-center text-white mb-8">
+      Tu contribución nos ayuda a continuar con nuestra misión. Por favor,
+      selecciona o ingresa el monto que deseas donar.
+    </p>
+  </div>
+  <form class="bg-white/90 p-8 my-4 border rounded-3xl">
+    <div class="mb-6">
+      <label class="block text-gray-700 text-base font-bold mb-2" for="amount">
+        Selecciona o ingresa el monto
+      </label>
+      <div class="flex flex-wrap gap-2 mb-4">
+        {
+          [5, 10, 20, 50, 100].map((amount) => (
+            <button
+              type="button"
+              class="bg-amber-500 hover:bg-amber-700 text-white font-bold py-2 px-4 rounded-full focus:outline-none focus:shadow-outline"
+              onclick={`document.getElementById('custom-amount').value = ${amount}`}
+            >
+              ${amount}
+            </button>
+          ))
+        }
+      </div>
+      <input
+        class="appearance-none border-b border-gray-800 bg-transparent w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+        id="custom-amount"
+        type="number"
+        placeholder="Ingresa el monto"
+        min="1"
+        step="1"
+      />
+    </div>
+
+    <div class="mb-6">
+      <label class="block text-gray-700 text-sm font-bold mb-2" for="name">
+        Nombre
+      </label>
+      <input
+        class="appearance-none border-b border-gray-800 bg-transparent w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+        id="name"
+        type="text"
+        placeholder="Tu nombre"
+      />
+    </div>
+
+    <div class="mb-6">
+      <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
+        Correo electrónico
+      </label>
+      <input
+        class="appearance-none border-b border-gray-800 bg-transparent w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+        id="email"
+        type="email"
+        placeholder="tu@email.com"
+      />
+    </div>
+
+    <div class="flex items-center justify-center">
+      <button
+        class="bg-green-500 hover:bg-green-700 text-white font-bold py-4 px-8 rounded-full focus:outline-none focus:shadow-outline"
+        type="submit"
+      >
+        Donar
+      </button>
+    </div>
+  </form>
+</div>
+
+<script></script>
